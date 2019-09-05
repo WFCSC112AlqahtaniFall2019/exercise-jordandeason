@@ -12,8 +12,11 @@ int main() {
     }
 
     // Reverse
-    for (i = 0; i < NUM_ELEMENTS; ++i) {
-        revVctr[i] = revVctr[NUM_ELEMENTS - i]; // Swap
+    int tempVar;
+    for (i = 0; i < NUM_ELEMENTS / 2; ++i) {
+        tempVar = revVctr[i];
+        revVctr[i] = revVctr[NUM_ELEMENTS - i - 1];// Swap
+        revVctr[NUM_ELEMENTS - i - 1] = tempVar;
     }
 
     // Print values
